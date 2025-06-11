@@ -30,6 +30,6 @@ public class Song {
 
     @Override
     public String toString() {
-        return this.getId() + " - " + this.getTitle();
+        return this.getId() + "-" + this.getTitle();
     }
 }
