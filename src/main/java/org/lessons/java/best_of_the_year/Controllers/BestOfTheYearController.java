@@ -27,7 +27,7 @@ public class BestOfTheYearController {
     private List<Movie> getBestMovies() {
         return List.of(
             new Movie("1", "Interstellar"),
-            new Movie("2", "How to train your drgon"),
+            new Movie("2", "How to train your dragon"),
             new Movie("3", "Jurassic Park")
         );
     }
