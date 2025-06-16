@@ -1,4 +1,4 @@
-package org.lessons.java.best_of_the_year.Classes;
+package org.lessons.java.best_of_the_year.models;
 
 public class Movie {
     

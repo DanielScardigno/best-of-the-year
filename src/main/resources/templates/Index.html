@@ -6,11 +6,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best of The year</title>
+
+    <!-- Bootstrap CSS -->
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.6/css/bootstrap.min.css}"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/best-of-the-year/src/main/resources/static/css/style.css">
 </head>
 
 <body>
     <main>
-        <h1 th:text="'Best of the year by ' + ${name}"/>
+        <div class="container d-flex justify-content-center">
+            <div class="row py-5">
+                <div class="col-12 col-sm-4 border border-black py-3">best of</div>
+                <div class="col-12 col-sm-8 border border-black py-2">
+                    <div th:replace="fragments/fragments :: button('/movies', Movies, '')"></div>
+                    <div th:replace="fragments/fragments :: button('/songs', Songs, '')"></div>
+                </div>
+
+                <div class="col-12 border border-black p-5">
+                    <p class="fs-5 d-flex justify-content-center" th:text="'Best of the year by ' + ${name}"/>
+                    <div class="fs-5 col-12 border border-black d-flex justify-content-center py-5">image</div>
+                    <div class=" fs-5 col-12 border border-black d-flex justify-content-center py-5   ">lorem ipsum</div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 

@@ -1,9 +1,9 @@
-package org.lessons.java.best_of_the_year.Controllers;
+package org.lessons.java.best_of_the_year.controllers;
 
 import java.util.List;
 
-import org.lessons.java.best_of_the_year.Classes.Movie;
-import org.lessons.java.best_of_the_year.Classes.Song;
+import org.lessons.java.best_of_the_year.models.Movie;
+import org.lessons.java.best_of_the_year.models.Song;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

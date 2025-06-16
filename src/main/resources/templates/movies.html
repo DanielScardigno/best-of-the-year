@@ -6,13 +6,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Movies</title>
+
+    <!-- Bootstrap CSS -->
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.6/css/bootstrap.min.css}"/>
 </head>
 
 <body>
     <main>
-        <ul>
-            <li th:each="movie : ${movies}" th:text="${movie.title}"/>
-        </ul>
+        <div class="container d-flex justify-content-center">
+            <div class="row py-5">
+                <div class="col-12 col-sm-4 border border-black py-3">best of</div>
+                <div class="col-12 col-sm-8 border border-black py-2">
+                    <div th:replace="fragments/fragments :: button('/movies', Movies, 'bg-primary')"></div>
+                    <div th:replace="fragments/fragments :: button('/songs', Songs, '')"></div>
+                </div>
+
+                <div class="col-12 border border-black p-5">
+                    <p class="fs-5 d-flex justify-content-center">Best Movies</p>
+                    <div class=" fs-5 col-12 border border-black d-flex justify-content-center py-3" th:each="movie : ${movies}" th:text="${movie.title}"></div>
+
+                    <div class="col-12 pt-5 d-flex justify-content-center">
+                        <div th:replace="fragments/fragments :: button('/?name=daniel', 'Torna alla home', '')"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 
